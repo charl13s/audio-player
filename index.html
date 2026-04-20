@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Audio Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="player-container">
+        <h2>Audio Player</h2>
+        
+        <audio id="myAudio" src="sample.mp3" preload="metadata"></audio>
+
+        <div class="time-display">
+            <span id="currentTime">0:00</span> / <span id="duration">0:00</span>
+        </div>
+
+        <div class="controls-row primary-controls">
+            <button id="skipBackBtn" title="Skip backward 5 seconds">⏪ 5s</button>
+            <button id="playPauseBtn" class="play-btn">Play</button>
+            <button id="skipForwardBtn" title="Skip forward 5 seconds">⏩ 5s</button>
+        </div>
+
+        <div class="controls-row volume-controls">
+            <button id="muteBtn">Mute</button>
+            <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="1">
+        </div>
+
+        <div class="controls-row speed-controls">
+            <label for="speedSelect">Playback Speed: </label>
+            <select id="speedSelect">
+                <option value="0.5">0.5x</option>
+                <option value="1" selected>1.0x (Normal)</option>
+                <option value="1.5">1.5x</option>
+                <option value="2">2.0x</option>
+            </select>
+        </div>
+
+        <div class="keyboard-hints">
+            <p><strong>Keyboard Shortcuts:</strong></p>
+            <p>[Space] Play/Pause | [M] Mute | [⬅/➡] Skip | [⬆/⬇] Volume</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
