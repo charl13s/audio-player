@@ -106,3 +106,12 @@ document.addEventListener('keydown', (e) => {
             break;
     }
 });
+
+// reset
+audio.addEventListener('ended', () => {
+    playPauseBtn.textContent = 'Play';
+    playPauseBtn.style.backgroundColor = '#28a745';
+    
+
+    audio.currentTime = 0; 
+});
